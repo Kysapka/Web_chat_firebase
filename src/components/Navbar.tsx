@@ -10,7 +10,7 @@ const Navbar = () => {
     const [user] = useAuthState(auth)
 
     return (
-        <AppBar style={{marginBottom: 10}} color={"secondary"} position="static">
+        <AppBar style={{marginBottom: 10, background: "rgba(225,237,255,0.93)"}}  position="static">
             <Toolbar variant={"dense"}>
                 <Grid container justifyContent={"flex-end"}>
                     { user ?

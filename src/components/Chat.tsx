@@ -42,7 +42,7 @@ const Chat = () => {
                     {messages && messages.map(message =>
                         <div style={{
                             margin: 10,
-                            border: user.uid === message.uid ? '2px solid green' : '2px solid red',
+                            border: user.uid === message.uid ? '2px solid #B8FFBE' : '2px solid rgba(225,237,255,0.93)',
                             marginLeft: user.uid === message.uid ? 'auto' : '10px',
                             width: 'fit-content',
                             padding: 5,

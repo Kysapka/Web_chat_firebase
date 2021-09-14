@@ -11,7 +11,10 @@ const Login = () => {
     const login = async () => {
         const provider = new firebase.auth.GoogleAuthProvider()
         const {user} =  await auth.signInWithPopup(provider)
-        console.log(user)
+    }
+
+    const loginAn = () => {
+        const {user} =   auth.signInAnonymously()
     }
 
     return (
@@ -29,9 +32,15 @@ const Login = () => {
                     <Typography variant="h5">
                         Приветствую тебя, самурай!
                     </Typography>
-                    <Box p={5}>
+                    <Box p={2}>
                         <Button onClick={login} variant={"outlined"}>
                             Войти с помощью Google
+                        </Button>
+
+                    </Box>
+                    <Box style={{marginBottom: 20}}>
+                        <Button onClick={loginAn} variant={"outlined"}>
+                            Войти анонимно
                         </Button>
                     </Box>
                 </Grid>
