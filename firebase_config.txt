@@ -1,0 +1,21 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDOCn_WfoRDGdKzorNRKsURZs53oUnD170",
+  authDomain: "kysapka-web-chat-react.firebaseapp.com",
+  projectId: "kysapka-web-chat-react",
+  storageBucket: "kysapka-web-chat-react.appspot.com",
+  messagingSenderId: "432851087871",
+  appId: "1:432851087871:web:f04b1d57b92b727765b7ca",
+  measurementId: "G-93KZCW63MZ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
