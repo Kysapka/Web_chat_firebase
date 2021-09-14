@@ -15,14 +15,21 @@ const Chat = () => {
     )
 
     const sendMessage = async () => {
+        if (value) {
         firestore().collection('messages').add({
             uid: user.uid,
             displayName: user.displayName,
             photoURL: user.photoURL,
             text: value,
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
-        })
+        })}
         setValue('')
+    }
+
+    const onKeyPressHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.charCode === 13) {
+            sendMessage();
+        }
     }
 
     if (loading) {
@@ -65,6 +72,7 @@ const Chat = () => {
                     style={{width: '80%'}}
                 >
                     <TextField
+                        onKeyPress={onKeyPressHandler}
                         fullWidth
                         rowsMax={2}
                         variant={'outlined'}
