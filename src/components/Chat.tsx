@@ -57,7 +57,7 @@ const Chat = () => {
                         }}>
                             <Grid container alignItems={"center"} style={{marginBottom: 5}}>
                                 <Avatar src={message.photoURL}/>
-                                <div style={{marginLeft: 5, borderRadius: 10}}>{message.displayName}</div>
+                                <div style={{marginLeft: 5, borderRadius: 10}}>{message.displayName ? message.displayName : "Анонимный чувак"}</div>
                             </Grid>
                             <div>{message.text}</div>
                         </div>

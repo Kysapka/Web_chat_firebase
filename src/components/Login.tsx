@@ -39,7 +39,7 @@ const Login = () => {
 
                     </Box>
                     <Box style={{marginBottom: 20}}>
-                        <Button disabled onClick={loginAn} variant={"outlined"}>
+                        <Button onClick={loginAn} variant={"outlined"}>
                             Войти анонимно
                         </Button>
                     </Box>
