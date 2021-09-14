@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Box, Button, Container, Grid, Typography} from "@material-ui/core";
-import {authType, Context} from "../index";
+import {Context} from "../index";
 import firebase from "firebase/compat";
 
 
@@ -21,7 +21,7 @@ const Login = () => {
                   alignItems={"center"}
                   justifyContent={"center"}
             >
-                <Grid style={{borderRadius: 15, width: 400, paddingTop: 20,background: "lightgray"}}
+                <Grid style={{borderRadius: 15, width: 400, paddingTop: 20,background: "rgba(225,237,255,0.93)"}}
                       container
                       alignItems={"center"}
                       direction={"column"}
